@@ -4,39 +4,39 @@
             <ul class="top-tab middle clearfix">
                 <li class="float-left"><img class="logo" src="/dist/img/logo.png"></li>
                 <li class="top-tab-item">
-                    <a href="/page/index.html">
+                    <a href="/index.html">
                         首页
                     </a>
                 </li>
                 <li class="tab-drop-down top-tab-item">
                     关于我们
                     <ul class="tab-drop-down-container">
-                        <li><a href="/page/about.html#companyInfo">公司简介</a></li>
-                        <li><a href="/page/about.html#team">管理团队</a></li>
-                        <li><a href="/page/about.html#partner">合作伙伴</a></li>
+                        <li><a href="/about.html#companyInfo">公司简介</a></li>
+                        <li><a href="/about.html#team">管理团队</a></li>
+                        <li><a href="/about.html#partner">合作伙伴</a></li>
                     </ul>
                 </li>
                 <li class="tab-drop-down top-tab-item">
                     公司业务
                     <ul class="tab-drop-down-container">
-                        <li><a href="/page/business.html#t1">直接租赁</a></li>
-                        <li><a href="/page/business.html#t2">售后租赁</a></li>
-                        <li><a href="/page/business.html#t3">转租赁</a></li>
-                        <li><a href="/page/business.html#t4">联合租赁</a></li>
+                        <li><a href="/business.html#t1">直接租赁</a></li>
+                        <li><a href="/business.html#t2">售后租赁</a></li>
+                        <li><a href="/business.html#t3">转租赁</a></li>
+                        <li><a href="/business.html#t4">联合租赁</a></li>
                     </ul>
                 </li>
                 <li class="tab-drop-down top-tab-item">
                     新闻公告
                     <ul class="tab-drop-down-container">
-                        <li><a href="/page/notify.html">公司公告</a></li>
-                        <li><a href="/page/notify.html">媒体报道</a></li>
+                        <li><a href="/notify.html">公司公告</a></li>
+                        <li><a href="/notify.html">媒体报道</a></li>
                     </ul>
                 </li>
                 <li class="tab-drop-down top-tab-item">
                     加入我们
                     <ul class="tab-drop-down-container">
-                        <li><a href="/page/recruit.html">人才理念</a></li>
-                        <li><a href="/page/recruit.html#r2">人才招聘</a></li>
+                        <li><a href="/recruit.html">人才理念</a></li>
+                        <li><a href="/recruit.html#r2">人才招聘</a></li>
                     </ul>
                 </li>
             </ul>

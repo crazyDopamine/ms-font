@@ -5,7 +5,6 @@ var Vue = require('vue');
 var widget = require('./widget/widget');
 var css = require('../../sass/style.scss');
 var iview = require('iview');
-var gConfig = require('./g_config');
 var utils = require('./utils');
 var filters = require('./filters');
 

@@ -6,7 +6,8 @@
     <meta content="IE=edge,Chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <meta content="webkit" name="renderer">
-    <title>玛莎</title>
+    <meta name="description" content="玛莎中国，致力打造一流融资租赁公司，全面服务实体经济发展，助力新能源！">
+    <title>玛莎中国</title>
     <link rel="stylesheet" href="/dist/style.css">
     <link rel="stylesheet" href="/dist/font-awesome/css/font-awesome.min.css">
 </head>
@@ -14,83 +15,80 @@
     <div class="" id="app" v-show="true" style="display:none;">
         <ms-header></ms-header>
         <div class="main">
-            <!--<div class="middle banner img" style="height:500px;">-->
-            <!--</div>-->
-            <img class="banner img" src="/dist/img/banner.jpg" height="600px" width="100%">
-            <div class="margin-top-20 middle">
+            <div class="index-container middle">
                 <ul class="company-business">
                     <li>
-                        <a href="/page/business.html#t1">
-                            <img src="/dist/img/index-business.jpg">
-                            <div class="business-mask">直接租赁<br>租赁广告</div>
+                        <a class="btn" href="/business.html#t1">
+                            <img src="/dist/img/index-business-1.jpg">
+                            <div class="business-mask">直接租赁<br/><br/>志存高远，诚信至上</div>
                         </a>
                     </li>
                     <li>
-                        <a href="/page/business.html#t2">
-                            <img src="/dist/img/index-business.jpg">
-                            <div class="business-mask">售后租赁<br>租赁广告</div>
+                        <a class="btn" href="/business.html#t2">
+                            <img src="/dist/img/index-business-2.jpg">
+                            <div class="business-mask">售后租赁<br/><br/>立足诚信，鹏飞万里</div>
                         </a>
                     </li>
                     <li>
-                        <a href="/page/business.html#t3">
-                            <img src="/dist/img/index-business.jpg">
-                            <div class="business-mask">转租赁<br>租赁广告</div>
+                        <a class="btn" href="/business.html#t3">
+                            <img src="/dist/img/index-business-3.jpg">
+                            <div class="business-mask">转租赁<br/><br/>立志如山，行道若水</div>
                         </a>
                     </li>
                     <li>
-                        <a href="/page/business.html#t4">
-                            <img src="/dist/img/index-business.jpg">
-                            <div class="business-mask">联合租赁<br>租赁广告</div>
+                        <a class="btn" href="/business.html#t4">
+                            <img src="/dist/img/index-business-4.jpg">
+                            <div class="business-mask">联合租赁<br/><br/>一马当先，驰骋沙场</div>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="flex-container middle margin-top-20" style="min-height:300px;">
+        <div class="flex-container middle index-container" style="min-height:300px;">
             <div class="padding-right-10 flex-container-h" style="width:50%;">
                 <div class="title"><i class="fa fa-volume-up fa-2x margin-right-10"></i><span class="fs-xl">公司公告</span><a class="float-right fs-m">更多</a></div>
                 <ul class="link-list">
-                    <li class="link-item-img">
-                        <a>
-                            <img src="/dist/img/logo.png">
+                    <li v-for="(data,index) in notify.dataList" :class="index==0?'link-item-img':'link-item'">
+                        <a href="/notify.html" v-if="index==0">
+                            <img :src="data.photo">
                             <div class="detail">
-                                <span class="fs-xxl single-row">我们的征途是星辰大海</span>
-                                <p class="content fc-gray-l">我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海</p>
-                                <span class="fc-gray-l float-right">5/15</span>
+                                <span class="fs-xxl single-row">{{data.title}}</span>
+                                <p class="item-content fc-gray-l" v-html="data.content"></p>
+                                <span class="fc-gray-l float-right">{{data.updated_at | date('MM/dd')}}</span>
                             </div>
                         </a>
+                        <a href="/notify.html" v-if="index!=0"><span>{{data.title}}</span><span class="float-right fc-gray-l">{{data.updated_at | date('MM/dd')}}</span></a>
                     </li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray-l">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
                 </ul>
             </div>
             <div class="flex-container-h padding-left-10" style="width:50%;">
                 <div class="title"><i class="fa fa-podcast fa-2x margin-right-10"></i><span class="fs-xl">媒体报道</span><a class="float-right fs-m">更多</a></div>
                 <ul class="link-list">
-                    <li class="link-item-img">
-                        <a>
-                            <img src="/dist/img/logo.png">
+                    <li v-for="(data,index) in media.dataList" :class="index==0?'link-item-img':'link-item'">
+                        <a href="/notify.html" v-if="index==0">
+                            <img :src="data.photo">
                             <div class="detail">
-                                <span class="fs-xxl single-row">我们的征途是星辰大海</span>
-                                <p class="content fc-gray-l">我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海我们的征途是星辰大海</p>
-                                <span class="fc-gray-l float-right">5/15</span>
+                                <span class="fs-xxl single-row">{{data.title}}</span>
+                                <p class="item-content fc-gray-l">{{data.description}}</p>
+                                <span class="fc-gray-l float-right">{{data.updated_at | date('MM/dd')}}</span>
                             </div>
                         </a>
+                        <a href="/notify.html" v-if="index!=0">
+                            <span>{{data.title}}</span>
+                            <span class="float-right fc-gray-l">{{data.updated_at | date('MM/dd')}}</span>
+                        </a>
                     </li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
-                    <li class="link-item"><a><span>我们的征途是星辰大海</span><span class="float-right fc-gray">5/15</span></a></li>
                 </ul>
             </div>
         </div>
-        <div class="margin-top-20 job-banner">
-            <a style="width:100%">
-                <img src="/dist/img/job-banner.jpeg" height="200px" width="100%">
-                <div class="job-mask">人才招聘<br>租赁广告</div>
-            </a>
+        <div class="index-container job-banner-area">
+            <div class="job-banner">
+                <img class="job-banner-img" src="/dist/img/job-banner-img.jpg">
+                <div class="job-mask">
+                    <label class="job-label">你的梦想你做主！</label>
+                    <a class="job-banner-a" href="/recruit.html">+加入我们</a>
+                </div>
+            </div>
         </div>
         <!--<div class="cooperation-area">-->
             <!--<ul>-->
@@ -103,5 +101,6 @@
         <ms-footer></ms-footer>
     </div>
 </body>
+<script type="text/javascript" src="/g_config.js"></script>
 <script type="text/javascript" src="/dist/index.js"></script>
 </html>

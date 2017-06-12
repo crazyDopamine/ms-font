@@ -62,10 +62,10 @@ module.exports = {
                 from: __dirname + '/app/img',
                 to: 'img'
             },
-            {
-                from: __dirname + '/app/js/common/g_config.js',
-                to: 'g_config.js'
-            },
+            // {
+            //     from: __dirname + '/app/js/common/g_config.js',
+            //     to: 'g_config.js'
+            // },
             {
                 from: __dirname + '/node_modules/font-awesome',
                 to: 'font-awesome'
